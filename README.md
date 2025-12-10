@@ -61,6 +61,21 @@ Stages:
 8. Build Android
     - Runs gradlew assembleDebug to build the Android app (debug variant).
 
+
+    **How to Add Secrets in GitHub**
+  **Step-by-step**
+   
+  - Go to your GitHub repository
+  - Click Settings
+  - Left sidebar → Secrets and variables Actions → Secrets
+  - Environments (recommended for prod)
+  - Click New repository secret
+  - Add:
+  - Name: API_URL
+  - secret: https://your-api.com
+
+
+
   
   **** Deploying to Google Play Console Internal Testing:**
 
