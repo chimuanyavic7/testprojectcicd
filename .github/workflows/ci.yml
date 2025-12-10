@@ -27,6 +27,17 @@ jobs:
 
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          api-level: 33
+          build-tools: 33.0.2
 
       - run: npm ci
-      - run: npm run android:build   # typically ./gradlew assembleRelease
+
+      - name: Make Gradle executable
+        run: chmod +x android/gradlew
+
+      - name: Clean Gradle
+        run: cd android && ./gradlew clean
+
+      - name: Build Android
+        run: cd android && ./gradlew assembleDebug
