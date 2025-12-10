@@ -99,3 +99,51 @@ To learn more about React Native, take a look at the following resources:
 =======
 # testprojectcicd
 >>>>>>> 806bf21444ab7d2501cf59be3358565f591c05be
+
+
+
+1. Create a new React Native project:
+    - Open your terminal and run npx react-native init TestProject (replace TestProject with your desired project name)
+    - Navigate to the project directory: cd TestProject
+2. Set
+
+
+
+
+What is CI/CD?
+
+CI/CD stands for Continuous Integration and Continuous Delivery/Deployment.
+It’s a way to automate building, testing, and releasing software so teams can deliver updates faster and with fewer errors.
+
+CI means:
+Every time you or your team pushes code to GitHub, a robot checks your work automatically. Download the code, Check for errors, Build the app, Sends to testers, Alerts if something breaks
+
+Step-by-Step:
+
+1. Create a new React Native project:
+    - Open your terminal and run npx @react-native-community/cli@ TestProject 
+    - Navigate to the project directory: cd TestProject
+  
+    - Set up a GitHub repository:
+    - Create a new GitHub repository with a readme.md file
+    - Initialize Git and push to GitHub
+        git init
+        git add .
+        git commit -m "Initial React Native TestProject"
+        git remote add origin https://github.com/chimuanyavic7/TestProject.git
+        git push -u origin main
+
+    - Initialize a new Git repository in your project directory: git init
+    - Add the GitHub repository as a remote: git remote add origin https://github.com/your-username/TestProject.git
+    - Commit your changes: git add . && git commit -m "Initial commit"
+    - Push the changes to GitHub: git push -u origin main
+  
+    - Create a new GitHub Actions workflow file:
+    - Create the GitHub Actions workflow (complete file)
+    - Create .github/workflows/android-ci.yml in your repo with this content. This workflow:
+    - Runs on push to main or on PRs.
+
+
+     
+     
+
