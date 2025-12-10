@@ -141,7 +141,36 @@ Step-by-Step:
     - Create a new GitHub Actions workflow file:
     - Create the GitHub Actions workflow (complete file)
     - Create .github/workflows/android-ci.yml in your repo with this content. This workflow:
-    - Runs on push to main or on PRs.
+    - Runs on push to main.
+  
+    **- This GitHub Actions workflow defines a CI/CD pipeline for a React Native Android project. Here's a breakdown of the pipeline and its stages:**
+
+The pipeline is triggered on:
+- Push events to the main branch
+- Pull requests targeting the main branch
+
+Job: build-android
+The pipeline consists of a single job called build-android, which runs on an ubuntu-latest environment.
+
+Stages:
+
+1. Checkout code
+    - Uses actions/checkout@v4 to checkout the repository code.
+2. Set up Node.js
+    - Uses actions/setup-node@v4 to set up Node.js 20.
+    - Caches npm dependencies to speed up subsequent runs.
+3. Install Java
+    - Uses actions/setup-java@v4 to set up Java 17 (Temurin distribution).
+4. Install Android SDK
+    - Uses android-actions/setup-android@v3 to set up the Android SDK (API level 33, build tools 33.0.2).
+5. Install dependencies
+    - Runs npm ci to install project dependencies.
+6. Make Gradle executable
+    - Makes the Gradle wrapper script executable.
+7. Clean Gradle
+    - Runs gradlew clean to clean the Gradle build.
+8. Build Android
+    - Runs gradlew assembleDebug to build the Android app (debug variant).
 
 
      
