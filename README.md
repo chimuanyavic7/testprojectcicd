@@ -23,7 +23,7 @@ Step-by-Step:
         git push -u origin main
 
     - Initialize a new Git repository in your project directory: git init
-    - Add the GitHub repository as a remote: git remote add origin https://github.com/your-username/TestProject.git
+    - Add the GitHub repository as a remote: git remote add origin https://github.com//chimuanyavic7/TestProject.git
     - Commit your changes: git add . && git commit -m "Initial commit"
     - Push the changes to GitHub: git push -u origin main
   
