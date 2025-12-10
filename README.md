@@ -31,7 +31,9 @@ Step-by-Step:
     - Create the GitHub Actions workflow (complete file)
     - Create .github/workflows/android-ci.yml in your repo with this content. This workflow:
     - Runs on push to main.
-  
+
+
+
     **- This GitHub Actions workflow defines a CI/CD pipeline for a React Native Android project. Here's a breakdown of the pipeline and its stages:**
 
 The pipeline is triggered on:
@@ -62,15 +64,16 @@ Stages:
     - Runs gradlew assembleDebug to build the Android app (debug variant).
 
 
+
+
     **How to Add Secrets in GitHub**
   **Step-by-step**
    
   - Go to your GitHub repository
   - Click Settings
-  - Left sidebar → Secrets and variables Actions → Secrets
-  - Environments (recommended for prod)
+  - Left sidebar → Secrets and variables Actions → Action
   - Click New repository secret
-  - Add:
+    Add:
   - Name: API_URL
   - secret: https://your-api.com
 
