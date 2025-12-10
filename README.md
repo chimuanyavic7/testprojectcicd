@@ -70,6 +70,17 @@ Stages:
 4. Upload to Google Play: Use the Google Play Console API or UI to upload the AAB file.
 5. Publish to Internal Testing: Set the app to Internal Testing and invite testers to download and install the app.
 
+   **Key Theoretical Steps:**
+1. Artifact Preparation: A signed Android App Bundle (.aab) is generated, with an incremented versionCode.
+2. Authentication (API/CI/CD): For automation, a Google Play Developer API Service Account JSON key is used. This key must be granted release management permissions in the Play Console.
+3. Deployment Method:
+    - Manual: Upload the .aab file directly through the Google Play Console UI under the Internal Testing track.
+    - Automated (CI/CD): Use a tool (like Fastlane or the official Google Play Publisher Library) to interact with the Developer API:
+    - Open an edit session $\rightarrow$ Upload the AAB $\rightarrow$ Assign the AAB to the Internal Testing track $\rightarrow$ Commit the edit.
+4.  Processing & Access: Google Play processes the AAB (which leverages Play App Signing). The app is made available almost immediately to the pre-configured Internal Testers (Google Accounts) via a private link on the Google Play Store.
+5.  Focus: Formal entry into the Google Play ecosystem, utilizing the Play App Signing service, and testing the core store distribution process.
+
+
 
      
      
